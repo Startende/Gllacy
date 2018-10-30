@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gllacy-catalog</title>
+    <link rel="stylesheet" href="CSS/style-catalog.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+
+<body>
+    <div class="grid">
+        <header>
+            <div class="left-part">
+                <div>
+                    <a href="index.html"><img src="img\Logo.svg" alt="" id = "Logo"></a>
+                </div>
+                <div class="dropdown">
+                    <a href="#"><div class="item-1">Каталог</div></a>
+                    <div class="drop-content">
+                        <a href="#">Новинки</a>
+                        <hr>
+                        <a href="#">Сливочное</a>
+                        <a href="#">Щербеты</a>
+                        <a href="#">Фруктовый лед</a>
+                        <a href="#">Мелорин</a>
+                    </div>
+                </div>
+                <a href="#"><div class="item-2">Доставка и оплата</div></a>
+                <a href="#"><div class="item-3">О Компании</div></a>
+            </div>
+            <div class="right-part">
+                <div class="lens">
+                    <img src="img\lens.svg" alt="" id = "lens">
+                    <img src="img\hover-lens.svg" alt="" id ="lensh">
+                    <div class="lens-content">
+                        <input type="text" placeholder="Что ищем?">
+                    </div>
+                </div>
+                <div class="entry">
+                    <img src="img\entry.svg" alt="" id = "entry">
+                    <img src="img\entry-hover.svg" alt="" id = "entryh">
+                Вход
+                    <div class="entry-content">
+                        <input type="email" placeholder="Электронная почта">
+                        <input type="password" placeholder="Пароль">
+                        <div class="two-elements">
+                            <div class="enter allbuttons">Войти</div>
+                            <div id="a2">
+                                <a href="#">Забыли пароль?</a>
+                                <a href="#">Новая регистрация</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="empty">
+                    <img src="img/basket.svg" alt="" id = "basket">
+                    <img src="img\basket-hover.svg" alt="" id = "basketh">
+                2 товара
+            </div>
+                </div>
+        </header>
+        <div class="crumbs">
+            <div>
+                <a href="index.html">Главная</a>
+                <p>»</p>
+                <a href="">Каталог</a>
+                <p>»</p>
+                <a href="">Сливочное</a>
+            </div>
+            <div>
+                <p class="time">С 10 до 12, ежедневно</p>
+                <p class="number"><b>8 812 450-25-25</b></p>
+            </div>
+        </div>
+        <section class="info-space">
+            <h1>Сливочное мороженное</h1>
+        </section>
+        <div class="morojenka">
+            <form action="http://echo.htmlacademy.ru/">
+                <div class="first-container">
+                    <div class="select">
+                        <label for="selector">Сортировка</label>
+                        <select id="selector" name="select-method">
+                            <option selected value="popular" name="popular">по популярности</option>
+                            <option value="cheap" name="cheapest">сначала недорогие</option>
+                            <option value="rich" name="expensive">сначала дорогие</option>
+                            <option value="calories" name="richness">по жирности</option>
+                        </select>
+                    </div>
+                    <div class="price">
+                        <label for="">Цена: 100 руб. - 500 руб.</label>
+                        <div class="slider">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <img src="img/filter-button.svg" alt="" id = "firstbutton">
+                            <img src="img/filter-button.svg" alt="" id = "secondbutton">
+                        </div>
+                        </div>
+                        <div class="richness">
+                            <label for="">Жирность</label>
+                            <div class="radiobox">
+                                <input type="radio" value="zero" id="percent1" name="item-richness">
+                                <label class="radiolabel" for="percent1">
+                                    <div>0%</div>
+                                </label>
+                                <input type="radio" value="less_10" id="percent2" name="item-richness">
+                                <label for="percent2" class="radiolabel">
+                                    <div>до 10%</div>
+                                </label>
+                                <input type="radio" value="less_30" id="percent3" name="item-richness">
+                                <label for="percent3" class="radiolabel">
+                                    <div>до 30%</div>
+                                </label>
+                                <input type="radio" value="upper_30" id="percent4" name="item-richness">
+                                <label for="percent4" class="radiolabel">
+                                    <div>выше 30%</div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second-container">
+                        <label for="filler" class="filler-label">Наполнители</label>
+                        <div class="filler">
+                            <div class="checkbox">
+                                <input type="checkbox" value="chockolate" name="choice" id="choice1">
+                                <label for="choice1" class="checklabel">шоколадные</label>
+                                <input type="checkbox" value="sugar" name="choice" id="choice2">
+                                <label for="choice2" class="checklabel">сахарные присыпки</label>
+                                <input type="checkbox" value="fruits" name="choice" id="choice3">
+                                <label for="choice3" class="checklabel">фрукты</label>
+                                <input type="checkbox" value="sirop" name="choice" id="choice4">
+                                <label for="choice4" class="checklabel">сиропы</label>
+                                <input type="checkbox" value="jam" name="choice" id="choice5">
+                                <label for="choice5" class="checklabel">джемы</label>
+                            </div>
+                            <button type="submit" class="submit">Применить</button>
+                        </div>
+                    </div>
+            </form>
+        </div>
+        <div class="ice1 styleclass">
+            <div>
+                <img src= "img/1.png" alt="">
+                <p>310₽/кг</p>
+            </div>
+            <p>
+                <span class = "underline">Сливочное с апельсиновым
+            джемом и цитрусовой стружкой</span>
+            </p>
+            <div class="block-hidden">
+                <div class="button-drop allbuttons">Быстрый просмотр</div>
+            </div>
+        </div>
+        <div class="ice2 styleclass">
+            <div>
+                <img src= "img/2.png" alt="">
+                <p>380₽/кг</p>
+            </div>
+            <p><span class="underline">Сливочно-кофейное с кусочками шоколада</span></p>
+            <div class="block-hidden">
+                <div class="button-drop allbuttons">Быстрый просмотр</div>
+            </div>
+        </div>
+        <div class="ice3 styleclass">
+            <div>
+                <img src= "img/3.png" alt="">
+                <p>355₽/кг</p>
+            </div>
+            <p><span class="underline">Сливочно-клубничное с присыпкой из белого шоколада</span></p>
+            <div class="block-hidden">
+                <div class="button-drop allbuttons">Быстрый просмотр</div>
+            </div>
+        </div>
+        <div class="ice4 styleclass">
+            <div>
+                <img src= "img/4.png" alt="">
+                <p>415₽/кг</p>
+            </div>
+            <p><span class="underline">Сливочный крем-брюле с карамельной подливкой</span></p>
+            <div class="block-hidden">
+                <div class="button-drop allbuttons">Быстрый просмотр</div>
+            </div>
+        </div>
+        <div class="space1"></div>
+        <div class="ice5 styleclass">
+            <div>
+                <img src= "img/5.png" alt="">
+                <p>325₽/кг</p>
+            </div>
+            <p><span class="underline">Сливочно с брусничным джемом</span></p>
+            <div class="block-hidden">
+                <div class="button-drop allbuttons">Быстрый просмотр</div>
+            </div>
+        </div>
+        <div class="ice6 styleclass">
+            <div>
+                <img src= "img/6.png" alt="">
+                <p>410₽/кг</p>
+            </div>
+            <p><span class="underline">Сливочно-черничное с цельными ягодами черники</span></p>
+            <div class="block-hidden">
+                <div class="button-drop allbuttons">Быстрый просмотр</div>
+            </div>
+        </div>
+        <div class="ice7 styleclass">
+            <div>
+                <img src= "img/7.png" alt="">
+                <p>375₽/кг</p>
+            </div>
+            <p><span class="underline">Сливочно-лимонное с карамельной присыпкой</span></p>
+            <div class="block-hidden">
+                <div class="button-drop allbuttons">Быстрый просмотр</div>
+            </div>
+        </div>
+        <div class="ice8 styleclass">
+            <div>
+                <img src= "img/8.png" alt="">
+                <p>320₽/кг</p>
+            </div>
+            <p><span class="underline">Сливочное с шоколадной стружкой</span></p>
+            <div class="block-hidden">
+                <div class="button-drop allbuttons">Быстрый просмотр</div>
+            </div>
+        </div>
+        <div class="space2"></div>
+        <div class="ice9 styleclass">
+            <div>
+                <img src= "img/9.png" alt="">
+                <p>440₽/кг</p>
+            </div>
+            <p><span class="underline">Сливочно-ванильное с кусочками шоколада</span></p>
+            <div class="block-hidden">
+                <div class="button-drop allbuttons">Быстрый просмотр</div>
+            </div>
+        </div>
+        <div class="ice10 styleclass">
+            <div>
+                <img src= "img/10.png" alt="">
+                <p>435₽/кг</p>
+            </div>
+            <p><span class="underline">Сливочное с ментоловым сиропом</span></p>
+            <div class="block-hidden">
+                <div class="button-drop allbuttons">Быстрый просмотр</div>
+            </div>
+        </div>
+        <div class="ice11 styleclass">
+            <div>
+                <img src= "img/11.png" alt="">
+                <p>355₽/кг</p>
+            </div>
+            <p><span class="underline">Сливочное с кусочками черного шоколада</span></p>
+            <div class="block-hidden">
+                <div class="button-drop allbuttons">Быстрый просмотр</div>
+            </div>
+        </div>
+        <div class="ice12 styleclass">
+            <div>
+                <img src= "img/12.png" alt="">
+                <p>420₽/кг</p>
+            </div>
+            <p><span class="underline">Сливочное с мятным сиропом</span></p>
+            <div class="block-hidden">
+                <div class="button-drop allbuttons">Быстрый просмотр</div>
+            </div>
+        </div>
+        <div class="space3">
+            <div class="number-page">
+                <button disabled class="buttonPageStyle">
+                    <img src="img/icon-left-small.png" alt="">
+                </button>
+                    <button class="buttonPageStyle">1</button>
+                    <button class="buttonPageStyle">2</button>
+                    <button class="buttonPageStyle">3</button>
+                    <button class="buttonPageStyle">4</button>
+                    <button class="buttonPageStyle">5</button>
+                    <button class="buttonPageStyle">
+                    </button>
+            </div>
+        </div>
+        <footer>
+            <div class="media">
+                <a class = "twitter" href = "#"></a>
+                <a class = "instagram" href = "#"></a>
+                <a class = "facebook" href = "#"></a>
+                <a class = "vk" href = "#"></a>
+            </div>
+            <div id="one">
+                <img src="img/heart.svg" alt="" id = "heart">
+                <a href="#">Для поставщиков
+                </a>
+                <a href="#">О производстве</a>
+            </div>
+            <div id="two">
+                <a href="#">Наши документы</a>
+                <a href="#">Экологические стандарты</a>
+            </div>
+            <div class="mademe">
+                <img src="img/logo-htmlacademy.svg" alt="" id="htmlacademy">
+                <span>Сделано в <a href="#">HTML Academy</a> © 2017</span>
+            </div>
+    </div>
+    </footer>
+</body>
+
+</html>

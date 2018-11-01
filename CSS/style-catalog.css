@@ -788,7 +788,7 @@ header {
     border-radius: 50%;
 }
 
-.radiolabel div {
+.radiolabel span {
     display: flex;
     align-items: center;
     justify-content: center;

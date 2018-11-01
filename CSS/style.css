@@ -362,7 +362,7 @@ header {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background: radial-gradient(50% 50%, #c9efdb, #849d8f);
+    background: radial-gradient(50% 50%, rgba(255,255,255,0.8), transparent);
     position: relative;
 }
 
@@ -385,7 +385,7 @@ header {
 
 .give-both {
     position: relative;
-    left: calc(50% - 239px);
+    left: calc(50% - 236px);
 }
 
 .give-both .allbuttons {
@@ -426,7 +426,9 @@ header {
     border-radius: 50%;
     background: white;
 }
-
+.theme-2:checked body{
+    background-color: red;
+}
 #morj1,
 #morj2,
 #morj3 {
@@ -445,7 +447,7 @@ header {
     margin-top: -267px;
     font-size: 60px;
     color: white;
-    font-weight: 900;
+    font-weight: 600;
     line-height: 58px;
 }
 #morj2 {
@@ -568,7 +570,7 @@ header {
     width: 200px;
     height: 46px;
 }
-#hit{
+.hit{
     position: absolute;
     width: 60px;
     height: 60px;
@@ -610,10 +612,10 @@ header {
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
 }
 
-.ice1 img,
-.ice2 img,
-.ice3 img,
-.ice4 img {
+.ice1 img:not(.hit),
+.ice2 img:not(.hit),
+.ice3 img:not(.hit),
+.ice4 img:not(.hit) {
     width: 247px;
     height: 247px;
 }

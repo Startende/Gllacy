@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Gllacy-catalog</title>
     <link rel="stylesheet" href="CSS/style-catalog.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
         <header>
             <div class="left-part">
                 <div>
-                    <a href="index.html"><img src="img\Logo.svg" alt="" id = "Logo"></a>
+                    <a href="index.html"><img src="img/Logo.svg" alt="" id = "Logo"></a>
                 </div>
                 <div class="dropdown">
                     <a href="#"><div class="item-1">Каталог</div></a>
@@ -31,15 +31,15 @@
             </div>
             <div class="right-part">
                 <div class="lens">
-                    <img src="img\lens.svg" alt="" id = "lens">
-                    <img src="img\hover-lens.svg" alt="" id ="lensh">
+                    <img src="img/lens.svg" alt="" id = "lens">
+                    <img src="img/hover-lens.svg" alt="" id ="lensh">
                     <div class="lens-content">
                         <input type="text" placeholder="Что ищем?">
                     </div>
                 </div>
                 <div class="entry">
-                    <img src="img\entry.svg" alt="" id = "entry">
-                    <img src="img\entry-hover.svg" alt="" id = "entryh">
+                    <img src="img/entry.svg" alt="" id = "entry">
+                    <img src="img/entry-hover.svg" alt="" id = "entryh">
                 Вход
                     <div class="entry-content">
                         <input type="email" placeholder="Электронная почта">
@@ -55,7 +55,7 @@
                 </div>
                 <div class="empty">
                     <img src="img/basket.svg" alt="" id = "basket">
-                    <img src="img\basket-hover.svg" alt="" id = "basketh">
+                    <img src="img/basket-hover.svg" alt="" id = "basketh">
                 2 товара
             </div>
                 </div>
@@ -82,14 +82,14 @@
                     <div class="select">
                         <label for="selector">Сортировка</label>
                         <select id="selector" name="select-method">
-                            <option selected value="popular" name="popular">по популярности</option>
-                            <option value="cheap" name="cheapest">сначала недорогие</option>
-                            <option value="rich" name="expensive">сначала дорогие</option>
-                            <option value="calories" name="richness">по жирности</option>
+                            <option selected value="popular" id="popular">по популярности</option>
+                            <option value="cheap" id="cheapest">сначала недорогие</option>
+                            <option value="rich" id="expensive">сначала дорогие</option>
+                            <option value="calories" id="richness">по жирности</option>
                         </select>
                     </div>
                     <div class="price">
-                        <label for="">Цена: 100 руб. - 500 руб.</label>
+                        <label id="slider">Цена: 100 руб. - 500 руб.</label>
                         <div class="slider">
                             <div class="line1"></div>
                             <div class="line2"></div>
@@ -98,29 +98,29 @@
                         </div>
                         </div>
                         <div class="richness">
-                            <label for="">Жирность</label>
+                            <label  id="radiobox">Жирность</label>
                             <div class="radiobox">
                                 <input type="radio" value="zero" id="percent1" name="item-richness">
                                 <label class="radiolabel" for="percent1">
-                                    <div>0%</div>
+                                    <span>0%</span>
                                 </label>
                                 <input type="radio" value="less_10" id="percent2" name="item-richness">
                                 <label for="percent2" class="radiolabel">
-                                    <div>до 10%</div>
+                                    <span>до 10%</span>
                                 </label>
                                 <input type="radio" value="less_30" id="percent3" name="item-richness">
                                 <label for="percent3" class="radiolabel">
-                                    <div>до 30%</div>
+                                    <span>до 30%</span>
                                 </label>
                                 <input type="radio" value="upper_30" id="percent4" name="item-richness">
                                 <label for="percent4" class="radiolabel">
-                                    <div>выше 30%</div>
+                                    <span>выше 30%</span>
                                 </label>
                             </div>
                         </div>
                     </div>
                     <div class="second-container">
-                        <label for="filler" class="filler-label">Наполнители</label>
+                        <label id="filler" class="filler-label">Наполнители</label>
                         <div class="filler">
                             <div class="checkbox">
                                 <input type="checkbox" value="chockolate" name="choice" id="choice1">
@@ -299,8 +299,7 @@
                 <img src="img/logo-htmlacademy.svg" alt="" id="htmlacademy">
                 <span>Сделано в <a href="#">HTML Academy</a> © 2017</span>
             </div>
-    </div>
     </footer>
+    </div>
 </body>
-
 </html>

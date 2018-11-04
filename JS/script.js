@@ -15,7 +15,7 @@ function main(event){
 		body.style.backgroundColor="#8996a6";
 		count = 1;
 	}
-	else {
+	else if(!!elemId && elemId == "theme-3"){
 		body.style.backgroundColor="#9d8b84";
 		count = 2;
 	}

@@ -252,7 +252,7 @@ header {
     display: none;
     position: absolute;
     left: -5px;
-    top: 37px;
+    top: 32px;
     background-color: #f7f6f3;
     border-radius: 5px;
     width: 143px;
@@ -278,7 +278,17 @@ header {
     text-decoration: none;
     color: black;
 }
-
+.drop-content::before{
+    display: flex;
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;
+    bottom: 100%;
+    width: 100%;
+    background-color: transparent;
+}
 .drop-content a:hover {
     background-color: #fbded7;
 }
@@ -326,6 +336,7 @@ header {
     padding-left: 10px;
     border-radius: 5px;
     outline: none;
+    font-size: 16px;
 }
 
 .lens:hover {
@@ -363,12 +374,46 @@ header {
     padding-right: 15px;
     font-size: 16px;
     border-radius: 20px;
-
     margin-left: 10px;
     background-color: rgba(255, 255, 255, 0.2);
 
 }
 
+.drop-content::before {
+    display: flex;
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;
+    bottom: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+
+.entry-content::before {
+    display: flex;
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;
+    bottom: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+
+.lens-content::before {
+    display: flex;
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;
+    bottom: 100%;
+    width: 100%;
+    background-color: transparent;
+}
 .entry:hover,
 .empty:hover {
     background-color: #f7f6f3;
@@ -390,6 +435,92 @@ header {
 
 #basket {
     margin-right: 9px;
+}
+
+.empty-hidden {
+    display: none;
+    width: 520px;
+    height: 240px;
+    background-color: #f8f7f4;
+    border-radius: 5px;
+    position: absolute;
+    top: 114%;
+    right: 0%;
+    z-index: 1;
+    padding: 10px 15px;
+    padding-bottom: 0px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.empty-hidden .total{
+    align-self: flex-end;
+    color: black;
+    font-size: 16px;
+    margin: 20px 0px;
+    font-weight: bold;
+}
+.basket-ice-element {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.basket-ice-element::before{
+    display: flex;
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;
+    bottom: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+
+.basket-ice-element img:nth-child(2) {
+    width: 35px;
+    height: 35px;
+    margin: 0px 15px;
+}
+
+.basket-ice-element span:first-of-type {
+    width: 215px;
+}
+
+.basket-ice-element span:nth-of-type(2) {
+    width: 95px;
+}
+.basket-ice-element span:not(:last-child) {
+    margin-right: 35px;
+}
+.basket-ice-element span {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 12.9px;
+}
+
+.basket-ice-element span p {
+    margin: 0px;
+    margin-left: 2.5px;
+    font-size: 12.9px;
+    color: #999999;
+}
+
+.basket-ice-element:nth-of-type(2){
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.checkout{
+    width: 175px;
+    height: 45px;
+    margin-bottom: 20px;
+    border-radius: 23px;
+    align-self: flex-end;
+}
+.empty:hover .empty-hidden {
+    display: flex;
+    flex-direction: column;
 }
 
 #entryh {
@@ -431,6 +562,7 @@ header {
     border-radius: 5px;
     padding-left: 10px;
     outline: none;
+    font-size: 16px;
 }
 
 .two-elements {

@@ -101,81 +101,151 @@ header {
     margin-top: 9px;
 }
 
-.item-1,
-.item-2,
-.item-3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 32px;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-weight: bold;
-    font-size: 16px;
-    border-radius: 20px;
-    color: white;
-}
-
-.item-1 span,
-.item-2 span,
-.item-3 span {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+.drop-content {
+    display: none;
 }
 
 .dropdown {
-    margin-left: 10px;
-    align-self: center;
-    display: flex;
     position: relative;
 }
 
-.drop-content {
-    display: none;
-    position: absolute;
-    left: -5px;
-    top: 37px;
-    background-color: #f7f6f3;
-    border-radius: 5px;
-    width: 143px;
-    height: 171px;
+.catalog{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 88px;
+    height: 32px;
+    margin-left: 5px;
+    background-color: transparent;
+    font-weight: bold;
+    border-radius: 16px;
+}
+.delivery{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 172px;
+    height: 32px;
+    background-color: transparent;
+    font-weight: bold;
+    border-radius: 16px;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 120px;
+    height: 32px;
+    background-color: transparent;
+    font-weight: bold;
+    border-radius: 16px;
+}
+.dropdown:hover .catalog,
+.delivery:hover,
+.about:hover {
     color: black;
-    font-size: 14px;
+    background-color: white;
+}
+
+.catalog:active{
+    background-color: #ededed;
+    color: black;
+    box-shadow: inset 0px 2px 2px 0px #555555;
+}
+
+.catalog span,
+.delivery span,
+.about span {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dropdown:hover .drop-content {
+    display: flex;
+}
+
+.drop-content {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    padding: 0px 0px;
+    top: 100%;
+    margin-top: 5px;
+    left: 2%;
+    justify-content: space-between;
+    width: 146px;
+    height: 178px;
+    border-radius: 5px;
+    background-color: white;
     z-index: 1;
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
-.drop-content hr {
-    width: 130px;
-    height: 1px;
-    border: none;
-    background-color: #d1d0ce;
+.drop-content::before {
+    display: flex;
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;
+    bottom: 100%;
+    width: 100%;
+    background-color: transparent;
 }
 
 .drop-content a {
-    display: inline-block;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     padding-left: 20px;
-    text-decoration: none;
-    color: black;
+}
+
+.drop-content hr {
+    background-color: #d1d0ce;
+    width: 130px;
+    border: 0;
+    height: 1.5px;
+    margin-bottom: 5px;
+    margin: 0;
+    align-self: center;
 }
 
 .drop-content a:hover {
     background-color: #fbded7;
 }
 
+.drop-content a:first-child {
+    font-weight: bold;
+}
+
+.drop-content a:first-child:hover {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.drop-content a:last-child:hover {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
 .drop-content a:active {
     background-color: #f6b5a5;
+    color: black;
 }
 
-.dropdown:hover .drop-content {
-    display: flex;
-    margin-top: 5px;
-    margin-left: 5px;
-    flex-direction: column;
-    justify-content: center;
+.drop-content a:first-child:active {
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
+.drop-content a:last-child:active{
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
 .lens {
     position: relative;
     display: flex;
@@ -201,6 +271,7 @@ header {
 }
 
 .lens-content input {
+    font-size: 16px;
     width: 310px;
     height: 44px;
     border: 1px solid #d3d3d2;
@@ -209,6 +280,17 @@ header {
     outline: none;
 }
 
+.lens-content::before {
+    display: flex;
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;
+    bottom: 100%;
+    width: 100%;
+    background-color: transparent;
+}
 .lens:hover {
     background-color: #f7f6f3;
 }
@@ -268,6 +350,17 @@ header {
     margin-right: 9px;
 }
 
+.entry-content::before {
+    display: flex;
+    content: " ";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;
+    bottom: 100%;
+    width: 100%;
+    background-color: transparent;
+}
 #entry {
     margin-right: 9px;
 }
@@ -287,6 +380,7 @@ header {
 }
 
 .entry-content input {
+    font-size: 16px;
     margin-bottom: 20px;
     width: 240px;
     height: 44px;
@@ -362,7 +456,7 @@ header {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    background: radial-gradient(50% 50%, rgba(255,255,255,0.8), transparent);
+    background: radial-gradient(50% 50%, rgba(255, 255, 255, 0.8), transparent);
     position: relative;
 }
 
@@ -398,9 +492,10 @@ header {
 
 .radiobutton {
     display: flex;
-    flex-direction:  row;
+    flex-direction: row;
     align-self: center;
 }
+
 .radiobutton input {
     display: none;
 }
@@ -421,14 +516,17 @@ header {
     border: 2px solid rgba(255, 255, 255, 1);
     border-radius: 50%;
 }
-.radiobutton input:checked + .radiolabel:before {
+
+.radiobutton input:checked+.radiolabel:before {
     border: 2px solid rgba(255, 255, 255, 1);
     border-radius: 50%;
     background: white;
 }
-.theme-2:checked body{
+
+.theme-2:checked body {
     background-color: red;
 }
+
 #morj1,
 #morj2,
 #morj3 {
@@ -440,9 +538,10 @@ header {
     top: 5%;
     left: 20%;
 }
+
 #morj1 p,
 #morj2 p,
-#morj3 p{
+#morj3 p {
     text-align: center;
     margin-top: -267px;
     font-size: 60px;
@@ -450,9 +549,11 @@ header {
     font-weight: 600;
     line-height: 58px;
 }
+
 #morj2 {
     display: none;
 }
+
 #morj3 {
     display: none;
 }
@@ -570,7 +671,8 @@ header {
     width: 200px;
     height: 46px;
 }
-.hit{
+
+.hit {
     position: absolute;
     width: 60px;
     height: 60px;
@@ -893,7 +995,7 @@ footer {
 
 #shadow {
     position: absolute;
-    top: 36%;
+    top: 37%;
     left: 25%;
 }
 

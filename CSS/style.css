@@ -58,7 +58,6 @@ a:active {
     border-bottom: 2px solid #9c2b1b;
     font-weight: bold;
     color: white;
-    font-size: 16px;
     outline: none;
     cursor: pointer;
 }
@@ -99,10 +98,6 @@ header {
 
 #Logo {
     margin-top: 9px;
-}
-
-.drop-content {
-    display: none;
 }
 
 .dropdown {
@@ -165,6 +160,7 @@ header {
 
 .dropdown:hover .drop-content {
     display: flex;
+    align-items: stretch;
 }
 
 .drop-content {
@@ -177,7 +173,7 @@ header {
     left: 2%;
     justify-content: space-between;
     width: 146px;
-    height: 178px;
+    min-height: 178px;
     border-radius: 5px;
     background-color: white;
     z-index: 1;
@@ -197,7 +193,8 @@ header {
 }
 
 .drop-content a {
-    height: 20%;
+    min-height: 20%;
+    padding: 5px 0px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -480,14 +477,17 @@ header {
 .give-both {
     position: relative;
     left: calc(50% - 236px);
-}
-
-.give-both .allbuttons {
     height: 30px;
-    width: 200px;
+    max-width: 200px;
     padding: 17px 40px;
-    border-radius: 34px;
     font-size: 32px;
+    border-radius: 32px;
+}
+.button-overflow{
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    margin: 0;
 }
 
 .radiobutton {
@@ -603,17 +603,20 @@ header {
     margin-top: 20px;
 }
 
-.rasp.allbuttons {
+.rasp{
     align-self: flex-end;
     padding: 10px 25px;
-    height: 30px;
-    width: 115px;
-    font-size: 17px;
-    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 21px;
+    min-width: 115px;
+    border-radius: 25px;
     margin-top: 40px;
 }
-
-
+.rasp p{
+    margin: 0;
+}
 
 .addition2 {
     grid-area: addition2;
@@ -631,6 +634,7 @@ header {
     color: white;
     align-self: flex-start;
     margin: 0;
+    
 }
 
 .addition2 p {
@@ -642,16 +646,17 @@ header {
     margin-top: 20px;
 }
 
-.choco.allbuttons {
+.choco{
     align-self: flex-end;
     padding: 10px 25px;
-    height: 30px;
-    width: 140px;
-    font-size: 17px;
+    min-height: 21px;
+    min-width: 140px;
     border-radius: 30px;
     margin-top: 40px;
 }
-
+.choco p{
+    margin:0;
+}
 .block-hidden {
     height: 80px;
     width: 267px;
@@ -676,8 +681,8 @@ header {
     position: absolute;
     width: 60px;
     height: 60px;
-    top: 1%;
-    left: 1%;
+    top: 2%;
+    left: 4%;
 }
 
 .ice1:hover,
@@ -703,7 +708,7 @@ header {
     text-align: center;
     margin-bottom: 0px;
     margin-top: 25px;
-    filter: drop-shadow(3px 0px 2px rgba(0, 0, 0, 0.5));
+    text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.5);
     color: white;
 }
 

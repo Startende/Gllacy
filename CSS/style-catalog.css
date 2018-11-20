@@ -37,7 +37,7 @@ a:active {
     ;
     grid-template-columns: 267px 267px 267px 267px;
     grid-column-gap: 26px;
-    grid-template-rows: 73px 50px 70px 180px 315px 40px 315px 40px 315px 140px 80px;
+    grid-template-rows: minmax(73px, auto) 50px 70px 180px 315px 40px 315px 40px 315px 140px 80px;
 }
 
 .crumbs {

@@ -1,25 +1,23 @@
 function main(event){
 	let body = document.body;
-	let morojenka = document.querySelector('.ice-background');
-	let count = 0;
 	let elemId = event.target.id;
-    for (let i = 0; i < morojenka.children.length; i++) {
- 		morojenka.children[i].style.display='none'; 
- 	}
-
-	if(!!elemId && elemId == "theme-1"){
+    
+	if(elemId == "theme-1"){
 		body.style.backgroundColor="#849d8f";
-		count = 0;
+		document.querySelector('.gradient').style.backgroundImage="url('img/Мороженко1.png')";
+		document.querySelector('.description').textContent="Крем-брюле и пломбир с малиновым джемом";
 	}
-	else if(!!elemId && elemId == "theme-2"){
+	else if(elemId == "theme-2"){
 		body.style.backgroundColor="#8996a6";
-		count = 1;
+		document.querySelector('.gradient').style.backgroundImage="url('img/Мороженко2.png')";
+		document.querySelector('.description').textContent="Шоколадный пломбир и лимонный сорбет";
 	}
-	else if(!!elemId && elemId == "theme-3"){
+	else if(elemId == "theme-3"){
 		body.style.backgroundColor="#9d8b84";
-		count = 2;
+		document.querySelector('.gradient').style.backgroundImage="url('img/Мороженко3.png')";
+		document.querySelector('.description').textContent="Пломбир с помадкой и клубничный щербет";
 	}
-	morojenka.children[count].style.display='block';
+	
 
 
 }

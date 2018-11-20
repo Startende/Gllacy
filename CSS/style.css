@@ -35,7 +35,7 @@ a:active {
         "footer footer footer footer";
     grid-template-columns: 267px 267px 267px 267px;
     grid-column-gap: 26px;
-    grid-template-rows: 73px 620px 230px 40px 305px 40px 306px 260px 410px 100px;
+    grid-template-rows: 73px minmax(620px, auto) minmax(230px, auto) 40px 305px 40px minmax(306px, auto) minmax(260px, auto) minmax(410px, auto)  minmax(100px, auto);
 }
 
 .space1 {
@@ -173,7 +173,7 @@ header {
     left: 2%;
     justify-content: space-between;
     width: 146px;
-    min-height: 178px;
+    /*min-height: 178px;*/
     border-radius: 5px;
     background-color: white;
     z-index: 1;
@@ -194,7 +194,7 @@ header {
 
 .drop-content a {
     min-height: 20%;
-    padding: 5px 0px;
+    padding: 7px 0px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -450,34 +450,75 @@ header {
 
 .morojenka {
     grid-area: morojenka;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    background: radial-gradient(50% 50%, rgba(255, 255, 255, 0.8), transparent);
-    position: relative;
+     background: radial-gradient(50% 50%, rgba(255, 255, 255, 0.8), transparent);
 }
+.gradient{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-image: url(../img/Мороженко1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    position: relative;
+    min-height: 620px;
 
-.ice-background {
-    align-self: center;
 }
 
 .sometxt {
-    align-self: flex-end;
-    justify-content: flex-start;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
+.date {
+    align-self: flex-end;
+    font-size: 14px;
+    color: white;
+    margin: 0;
+  
+}
+
+.number {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.description{
+    padding: 0px 227px;
+    color: white;
+    text-align: center;
+    font-size: 58px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
 .two-items {
     display: flex;
     flex-direction: row;
-    position: absolute;
     width: 100%;
-    bottom: 50px;
+    align-items: center;
+    margin-bottom: 10px;
+    align-self: flex-end;
 }
 
+.trippe{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-bottom: 40px;
+}
 .give-both {
     position: relative;
     left: calc(50% - 236px);
     height: 30px;
+
     max-width: 200px;
     padding: 17px 40px;
     font-size: 32px;
@@ -523,78 +564,27 @@ header {
     background: white;
 }
 
-.theme-2:checked body {
-    background-color: red;
-}
-
-#morj1,
-#morj2,
-#morj3 {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    top: 5%;
-    left: 20%;
-}
-
-#morj1 p,
-#morj2 p,
-#morj3 p {
-    text-align: center;
-    margin-top: -267px;
-    font-size: 60px;
-    color: white;
-    font-weight: 600;
-    line-height: 58px;
-}
-
-#morj2 {
-    display: none;
-}
-
-#morj3 {
-    display: none;
-}
-
-.sometxt {
-    align-self: flex-end;
-}
-
-.sometxt .date {
-    text-align: right;
-    color: white;
-    margin: 0px;
-}
-
-.number {
-    margin: 0px;
-    font-size: 30px;
-    color: white;
-}
-
-
-
 .addition1 {
     grid-area: addition1;
+}
+.addition1dinamic{
     background-size: cover;
     background-image: url(../img/raspberry.png);
 }
-
-.addition1 {
+.addition1dinamic {
     display: flex;
     padding: 20px;
     flex-direction: column;
+    border-radius: 20px;
 }
 
-.addition1 h1 {
+.addition1dinamic h1 {
     color: white;
     align-self: flex-start;
     margin: 0;
 }
 
-.addition1 p {
+.addition1dinamic p {
     color: white;
     align-self: flex-start;
     margin: 0;
@@ -610,7 +600,7 @@ header {
     justify-content: center;
     align-items: center;
     min-height: 21px;
-    min-width: 115px;
+    max-width: 120px;
     border-radius: 25px;
     margin-top: 40px;
 }
@@ -620,24 +610,25 @@ header {
 
 .addition2 {
     grid-area: addition2;
+}
+.addition2dinamic{
     background-size: cover;
     background-image: url(../img/chocoback.png);
 }
-
-.addition2 {
+.addition2dinamic {
     display: flex;
     padding: 20px;
     flex-direction: column;
+    border-radius: 20px;
 }
 
-.addition2 h1 {
+.addition2dinamic h1 {
     color: white;
     align-self: flex-start;
     margin: 0;
-    
 }
 
-.addition2 p {
+.addition2dinamic p {
     color: white;
     align-self: flex-start;
     margin: 0;
@@ -646,11 +637,12 @@ header {
     margin-top: 20px;
 }
 
+
 .choco{
     align-self: flex-end;
     padding: 10px 25px;
     min-height: 21px;
-    min-width: 140px;
+    max-width: 148px;
     border-radius: 30px;
     margin-top: 40px;
 }
@@ -664,8 +656,8 @@ header {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 100%;
-    background-color: rgba(255, 255, 255, 0.2);
+    top: calc(100% - 80px);
+
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     z-index: 1;
@@ -676,7 +668,9 @@ header {
     width: 200px;
     height: 46px;
 }
-
+.button-drop div{
+    max-width: 149px;
+}
 .hit {
     position: absolute;
     width: 60px;
@@ -685,25 +679,36 @@ header {
     left: 4%;
 }
 
-.ice1:hover,
-.ice2:hover,
-.ice3:hover,
-.ice4:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+.inice1:hover,
+.inice2:hover,
+.inice3:hover,
+.inice4:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 20px 14px 5px rgba(0, 0, 0, 0.2);
+
 }
 
-.ice1:hover .block-hidden,
-.ice2:hover .block-hidden,
-.ice3:hover .block-hidden,
-.ice4:hover .block-hidden {
+.inice1:hover .block-hidden,
+.inice2:hover .block-hidden,
+.inice3:hover .block-hidden,
+.inice4:hover .block-hidden {
     display: flex;
     align-self: center;
 }
-
-.ice1 p,
-.ice2 p,
-.ice3 p,
-.ice4 p {
+.inice1::after,
+.inice2::after,
+.inice3::after,
+.inice4::after {
+    content: " ";
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: 80px;
+    width: 100%;
+}
+.inice1 p,
+.inice2 p,
+.inice3 p,
+.inice4 p {
     font-size: 17px;
     text-align: center;
     margin-bottom: 0px;
@@ -719,22 +724,23 @@ header {
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
 }
 
-.ice1 img:not(.hit),
-.ice2 img:not(.hit),
-.ice3 img:not(.hit),
-.ice4 img:not(.hit) {
+.inice1 img:not(.hit),
+.inice2 img:not(.hit),
+.inice3 img:not(.hit),
+.inice4 img:not(.hit) {
     width: 247px;
     height: 247px;
 }
 
-.ice1 div p,
-.ice2 div p,
-.ice3 div p,
-.ice4 div p {
+.inice1 div p,
+.inice2 div p,
+.inice3 div p,
+.inice4 div p {
     text-align: left;
     font-size: 45px;
     margin: 0px;
     margin-top: -75px;
+    min-height: auto;
 }
 
 .styleclass {
@@ -748,30 +754,58 @@ header {
 
 .ice1 {
     grid-area: ice1;
-    position: relative;
-}
 
+}
+.inice1{
+    position: relative;
+    min-height: 305px;
+    display: flex;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
 .ice2 {
     grid-area: ice2;
-    position: relative;
+
 }
 
+.inice2{
+    position: relative;
+    min-height: 305px;
+    display: flex;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
 .ice3 {
     grid-area: ice3;
+   
+
+}
+.inice3{
     position: relative;
+    min-height: 305px;
+    display: flex;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .ice4 {
     grid-area: ice4;
-    position: relative;
 }
-
+.inice4{
+    position: relative;
+    min-height: 305px;
+    display: flex;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
 .info {
     grid-area: info;
     background-image: url(../img/waffle.png);
     display: flex;
+    background-size: cover;
     flex-direction: column;
-
+    border-radius: 20px;
+    padding-bottom: 20px;
 }
 
 .infohead {
@@ -789,8 +823,8 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 540px;
-    height: 90px;
+    min-width: 540px;
+    min-height: 90px;
     font-size: 16px;
 }
 
@@ -814,6 +848,7 @@ header {
     justify-content: space-between;
     width: 1100px;
     padding-left: 20px;
+    margin-bottom: 10px;
 
 }
 
@@ -825,28 +860,22 @@ header {
     grid-area: addition3;
     padding-top: 40px;
 }
-
-.addition3 img {
-    position: absolute;
-    z-index: -1;
+.service{
+    background-image: url(../img/strawberry.png);
+    min-height: 180px;
+    border-radius: 20px;
+    padding: 20px;
 }
-
-.addition3 p {
-    margin: 0;
-    margin-left: 20px;
-    margin-top: 30px;
+.service p{
+ font-size: 16px;
+ font-weight: 500;
+ margin: 10px 0px;
 }
-
-.addition3 a {
-    margin-left: 20px;
-    width: 280px;
-    height: 80px;
-    align-items: flex-start;
-    font-size: 24px;
+.service a span{
+    font-size: 23px;
     font-weight: bold;
-    text-decoration: underline;
+    border-bottom: 1.5px solid black;
 }
-
 .addition4 {
     grid-area: addition4;
     padding-top: 40px;
@@ -856,26 +885,29 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 560px;
-    height: 220px;
+    width: 540px;
+    min-height: 200px;
     background-image: url(../img/gradient.svg);
+    background-size: cover;
     border-radius: 20px;
+    padding: 10px;
 }
 
 .styleform {
     display: flex;
     flex-direction: column;
     background-color: #f8f7f4;
-    width: 520px;
-    height: 140px;
-    padding: 35px 15px;
+    width: 510px;
+    min-height: 130px;
     border: 5px;
-    border-radius: 20px;
+    justify-content: space-between;
+    border-radius: 10px;
     color: #5a5a5a;
+    padding: 35px 15px;
 }
 
 .two-form {
-    margin-top: 45px;
+    margin-top: 10px;
     align-self: center;
     align-items: center;
     display: flex;
@@ -884,7 +916,7 @@ header {
 }
 
 .two-form input {
-    width: 353px;
+    min-width: 340px;
     height: 44px;
     font-size: 16px;
     border: 1px solid #d3d3d2;
@@ -896,8 +928,9 @@ header {
 .send.allbuttons {
     border-radius: 30px;
     height: 44px;
-    width: 130px;
+    width: 95px;
     margin-left: 10px;
+    padding: 0px 20px;
 }
 
 .map {
@@ -906,6 +939,7 @@ header {
     background-size: 100% 100%;
     background-image: url(../img/map.png);
     margin-top: 40px;
+    padding: 34px 0px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -926,27 +960,26 @@ header {
 .backform {
     align-self: center;
     background-color: white;
-    height: 271px;
+    min-height: 201px;
     width: 252px;
     margin-right: 26px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     padding: 35px 25px;
-    padding-bottom: 0;
 
 }
 
 .sendform.allbuttons {
-    width: 250px;
+    width: 180px;
+    padding:0px 35px;
     height: 44px;
     border-radius: 30px;
-    margin-top: 10px;
 }
 
 .type-1 {
     margin: 0;
+    margin-bottom: 5px;
     font-size: 16px;
 }
 
@@ -969,8 +1002,10 @@ footer {
     grid-area: footer;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     border-top: 1.2px solid rgba(255, 255, 255, 0.5);
     position: relative;
+    padding: 20px 0px;
 }
 
 .mademe span {
@@ -983,10 +1018,12 @@ footer {
     flex-direction: row;
     align-items: center;
 }
-
+.soc{
+    margin-right: 10px;
+}
 .twitter {
     font-size: 0;
-    margin-right: 10px;
+    
     height: 32px;
     width: 32px;
     border: 3px solid rgba(255, 255, 255, 0.2);
@@ -1006,7 +1043,7 @@ footer {
 
 .instagram {
     font-size: 0;
-    margin-right: 10px;
+   
     height: 32px;
     width: 32px;
     border: 3px solid rgba(255, 255, 255, 0.2);
@@ -1020,7 +1057,7 @@ footer {
 
 .facebook {
     font-size: 0;
-    margin-right: 10px;
+    
     height: 32px;
     width: 32px;
     border: 3px solid rgba(255, 255, 255, 0.2);
@@ -1039,6 +1076,7 @@ footer {
     border: 3px solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     background: url(../img/vk.svg) no-repeat;
+    margin: 0;
 }
 
 .vk:hover {
@@ -1046,9 +1084,6 @@ footer {
 }
 
 #one {
-    position: absolute;
-    top: 25%;
-    left: 32%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1057,9 +1092,6 @@ footer {
 }
 
 #two {
-    position: absolute;
-    top: 25%;
-    left: 51%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1100,8 +1132,8 @@ footer {
     height: 16px;
     width: 18px;
     position: absolute;
-    top: 0%;
-    left: -18%;
+    top: 29%;
+    left: 24%;
 }
 
 #htmlacademy {
@@ -1110,10 +1142,7 @@ footer {
 }
 
 .mademe {
-    position: absolute;
-    left: 79%;
-    top: 12%;
-    align-self: flex-start;
+    align-self: center;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
